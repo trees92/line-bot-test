@@ -23,6 +23,7 @@ $app->post('/callback', function (Request $request) use ($app, $bot) {
         $from = $obj['content']['from'];
         $content = $obj['content'];
         if ($content['text']) {
+            $bot->sendText($from, sprintf('%s is GOD', $content['text'])); 
         }
     }
     return 0;
